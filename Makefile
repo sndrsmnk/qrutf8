@@ -36,13 +36,10 @@ install: all
 clean:
 	$(RM) *.o *.so core qrutf8
 
-qrutf8: qrutf8.o base32.o hmac.o sha1.o
+qrutf8: qrutf8.o
 	$(CC) -g $(DEF_LDFLAGS) -o $@ $+ $(LDL_LDFLAGS)
 
-qrutf8.o: qrutf8.c base32.h hmac.h sha1.h
-base32.o: base32.c base32.h
-hmac.o: hmac.c hmac.h sha1.h
-sha1.o: sha1.c sha1.h
+qrutf8.o: qrutf8.c
 
 .c.o:
 	$(CC) --std=gnu99 -Wall -O2 -g -fPIC -c $(DEF_CFLAGS) -o $@ $<

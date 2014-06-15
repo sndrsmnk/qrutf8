@@ -20,10 +20,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "base32.h"
-#include "hmac.h"
-#include "sha1.h"
-
 #define ANSI_RESET        "\x1B[0m"
 #define ANSI_BLACKONGREY  "\x1B[30;47;27m"
 #define ANSI_WHITE        "\x1B[27m"
