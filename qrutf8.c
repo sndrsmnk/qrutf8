@@ -62,10 +62,6 @@ int main(int argc, char **argv) {
     if (QRcode_encodeString8bit && QRcode_free) {
         QRcode *qrcode = QRcode_encodeString8bit(url, 0, 1);
 
-        // Drawing the QRCode with Unicode block elements is desirable as
-        // it makes the code much smaller, which is often easier to scan.
-        // Unfortunately, many terminal emulators do not display these
-        // Unicode characters properly.
         printf(ANSI_BLACKONGREY);
         for (int i = 0; i < qrcode->width + 4; ++i) {
             printf(" ");
