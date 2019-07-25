@@ -38,9 +38,9 @@ int main(int argc, char **argv) {
 
     const char *url = argv[1];
 
-    void *qrencode = dlopen("libqrencode.so.2", RTLD_NOW | RTLD_LOCAL);
+    void *qrencode = dlopen("libqrencode.so.3", RTLD_NOW | RTLD_LOCAL);
     if (!qrencode) {
-        qrencode = dlopen("libqrencode.so.3", RTLD_NOW | RTLD_LOCAL);
+        qrencode = dlopen("libqrencode.so.4", RTLD_NOW | RTLD_LOCAL);
     }
     if (!qrencode) {
         printf("dlopen: %s\n", dlerror());
